@@ -1,6 +1,10 @@
+Param(
+    [parameter(mandatory=$true)]$Arg1
+)
+
 # 処理対象のフォルダ
 $MinecraftDir = "$env:APPDATA\.minecraft";
-$newProfileDir = "$env:APPDATA\.minecraft\profile_dir\forge_1.18.2";
+$newProfileDir = "$env:APPDATA\.minecraft\profile_dir\$Arg1";
 
 New-Item $newProfileDir -ItemType Directory
 # $MinecraftDir内のファイル・フォルダのリストを取得する。
