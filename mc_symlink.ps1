@@ -32,3 +32,6 @@ foreach($unlinkDir in $unlinkDirList)
 {
     Remove-Item -Path "$newProfileDir\$unlinkDir"
 } 
+
+# Mod入れるフォルダも自動で作ってくれると嬉しいよね
+New-Item "$newProfileDir\mods" -ItemType Directory

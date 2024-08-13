@@ -26,3 +26,6 @@ unlinkDirList=(
 for unlinkDir in "${unlinkDirList[@]}"; do
     unlink "$newProfileDir/${unlinkDir}"
 done
+
+# Mod入れるフォルダも自動で作ってくれると嬉しいよね
+mkdir "$newProfileDir/mods"
